@@ -1,26 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const Meetup = require('../models/Meetup')
+const meetups = require('./meetups');
+const guests = require('./guests');
 
+router.use(meetups);
+router.use(guests);
 
-router.get('/meetups', function (req, res) {
-    Meetup.find()
-        .then(meetups => res.json(meetups))
-        .catch(err => res.status(500).json({error:err}));
-});
-
-router.post('/meetups' ,function (req, res) {
-    Meetup.create(req.body)
-        .then(m => res.json(m))
-        .catch(err => err => res.status(500).json({error:err}))
-});
-
-// router.post('/:say', function (req, res) {
-//     let say = req.params.say;
-//     let {first, last} = req.body;
-//     let message = `${say} ${first} ${last}`;
-//     res.json({message});
-// });
 
 module.exports = router;

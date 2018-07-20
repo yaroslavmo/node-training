@@ -1,7 +1,7 @@
 const express = require('express');
 
 const app = express();
-const router = require('./routes');
+const router = require('./routes/meetups');
 const mongoose = require('mongoose');
 
 const DB_URL = 'mongodb://localhost/interlink-meetup';

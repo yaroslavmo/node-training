@@ -1,5 +1,5 @@
-const meetups = require('../controllers/MeetupController');
-const guests = require('../controllers/GuestController');
+const meetups = require('./MeetupController');
+const guests = require('./GuestController');
 
 module.exports = {
     meetups,

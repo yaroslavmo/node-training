@@ -2,7 +2,7 @@ const Guest = require('../models/Guest');
 
 
 class GuestController {
-    find(query) {
+    find() {
         return Guest.find()
     }
 
